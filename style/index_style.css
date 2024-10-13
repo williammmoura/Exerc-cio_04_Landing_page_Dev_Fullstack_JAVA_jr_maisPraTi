@@ -1,54 +1,148 @@
-*{
+/* Resetando margens, padding e box-sizing */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*Layout do flexbox para colocar o footer para o rodapé*/
-body{
+/* Layout base com flexbox */
+body {
     display: flex;
     flex-direction: column;
-    min-width: 100vh;
+    min-height: 100vh;
+    background-color: var(--primary);
+    color: var(--text-color);
 }
 
-/*Menu horizontal*/
-#horizontal_menu{
+:root {
+    --primary: #474747;
+    --secondary: #00a6ff;
+    --hover-color: #47a0d0;
+    --text-color: #fff;
+}
+
+/* Estilização do header */
+header {
     display: flex;
     justify-content: space-between;
-    background-color: aqua;
-    padding: 10px 20px;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: rgba(187, 185, 185, 0.38);
+    border-bottom: 1px solid var(--secondary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    transition: background-color 0.3s ease-in-out;
 }
 
-#horizontal_menu ul li{
-    margin: 0 15px;
+header img {
+    width: 80px; /* Defina a largura da logo */
+    height: auto;
 }
 
-#horizontal_menu ul {
+nav {
     display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+#nav-horizontal-menu {
     list-style: none;
+    display: flex;
+    gap: 15px;
 }
 
-#horizontal_menu ul li a{
-    padding: 10px;
+#nav-horizontal-menu li a {
     text-decoration: none;
-    color: inherit;
-}
-
-#horizontal_menu ul li a:hover{
-    background-color: antiquewhite;
-    border-radius: 6px;
-}
-
-#horizontal_menu button{
-    background-color: blue;
-    color: aliceblue;
-    border: none;
-    border-radius: 6px;
+    color: var(--text-color);
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
     padding: 10px 15px;
-    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
 }
 
-#horizontal_menu button:hover{
-    background-color: blueviolet;
+#nav-horizontal-menu li a:hover {
+    background-color: var(--hover-color);
+    color: var(--primary);
+}
+
+#nav-horizontal-menu li a:active {
+    transform: scale(0.95);
+}
+
+div button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--secondary);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+div button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Estilização da imagem de fundo */
+#background-image {
+    background-image: url('../assets/img/DSC_0534.JPG');
+    background-size: cover;
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    height: calc(100vh - 0px);
+    position: relative;
+    z-index: -1;
+}
+
+/* Estilização da seção do banner */
+#banner {
+    background-color: transparent;
+    margin-top: 100px; /* Certifique-se de ajustar para o tamanho do header */
+    min-height: 400px; /* Altura mínima para o banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilização do footer */
+footer {
+    background-color: rgba(187, 185, 185, 0.38);
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid var(--secondary);
+    position: relative;
+    margin-top: auto; /* Adiciona espaço automático acima do footer */
+    width: 100%; /* Garante que o footer ocupe toda a largura */
+}
+
+footer p {
+    margin-bottom: 15px;
+}
+
+footer a {
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+}
+
+#footer-p-id {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--secondary);
 }
