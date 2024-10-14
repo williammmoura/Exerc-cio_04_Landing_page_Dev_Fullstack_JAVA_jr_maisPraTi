@@ -98,18 +98,81 @@ div button:hover {
     background-repeat: no-repeat;
     height: calc(100vh - 0px);
     position: relative;
+    display: flex;
+    flex-direction: column; /* Altera para coluna para empilhar os elementos */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto no meio */
     z-index: -1;
 }
 
+/* Estilização das tags <h1> e <p> */
+#background-image h1 {
+    font-size: 4rem; /* Ajusta o tamanho da fonte do título */
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Aumenta o espaçamento entre letras */
+}
+
+#background-image p {
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte do parágrafo */
+    color: var(--primary);
+    margin-top: 20px; /* Dá espaço entre o <h1> e o <p> */
+}
+
+/*Estilização do Main*/
+main {
+    padding-bottom: 20px; /* Garante espaço entre o conteúdo e o footer */
+}
+
 /* Estilização da seção do banner */
-#banner {
-    background-color: transparent;
-    margin-top: 100px; /* Certifique-se de ajustar para o tamanho do header */
-    min-height: 400px; /* Altura mínima para o banner */
+#banner{
+    margin-top: 100px;
+    min-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
+
+.swiper-slide p {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.swiper-container{
+    width: 80%;
+    height: 100%;
+}
+
+.swiper-slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+.swiper-slide img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;;
+}
+
+.swiper-pagination-bullet{
+    background: var(--secondary);
+}
+
+.swiper-button-next, .swiper-button-prev{
+    color: var(--secondary);
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover{
+    color: var(--hover-color);
+}
+
 
 /* Estilização do footer */
 footer {
@@ -145,4 +208,15 @@ footer img:hover {
     margin-top: 10px;
     font-size: 14px;
     color: var(--secondary);
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.social-icons li {
+    margin: 0 10px;
 }

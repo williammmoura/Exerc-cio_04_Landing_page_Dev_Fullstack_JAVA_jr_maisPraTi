@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weather and Climate - We understand what the sky says. Learn about our weather services and testimonials from clients.">
+    <meta name="keywords" content="weather, climate, forecasting, meteorology, services">
+
     <title>Weather and Climate</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <link rel="stylesheet" href="style/index_style.css">
 </head>
@@ -12,23 +21,20 @@
         <img src="assets/img/weather_and_climate_logo.png" alt="Weather and Climate Logo">
         <nav>
             <ul id="nav-horizontal-menu">
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Testimonials</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div>
-            <button>Sign up</button>
+            <button aria-label="Sign up for our services">Sign up</button>
         </div>
     </header>
 
     <main>
         <section id="background-image">
             <!-- A imagem de fundo será aplicada aqui -->
-        </section>
-        
-        <section id="introduction">
             <h1 id="introduction-h1">Weather and Climate</h1>
             <p id="introduction-p">
                 We understand what the sky says!
@@ -65,12 +71,28 @@
     </main>
 
     <footer>
-        <p>Social media</p>
-        <a href=""><img src="assets/img/GitHub-Mark-Light-32px.png" alt="GitHub logo"></a>
-        <a href=""><img src="assets/img/Logo_linkedin.png" alt="Linkedin logo"></a>
-        <a href=""><img src="assets/img/Instagram_icon.png" alt="Instagram logo"></a>
+        <p>Follow us on:</p>
+        <ul class="social-icons">
+            <li><a href=""><img src="assets/img/GitHub-Mark-Light-32px.png" alt="GitHub Logo"></a></li>
+            <li><a href=""><img src="assets/img/Logo_linkedin.png" alt="LinkedIn Logo"></a></li>
+            <li><a href=""><img src="assets/img/Instagram_icon.png" alt="Instagram Logo"></a></li>
+        </ul>
 
         <p id="footer-p-id">&copy; 2024 <img src="assets/img/Logo - WMM.png" alt=""> Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+    </script>
 </body>
 </html>
