@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Weather and Climate - We understand what the sky says. Learn about our weather services and testimonials from clients.">
     <meta name="keywords" content="weather, climate, forecasting, meteorology, services">
-
     <title>Weather and Climate</title>
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style/index_style.css">
 </head>
+
 <body>
     <header>
         <img src="assets/img/weather_and_climate_logo.png" alt="Weather and Climate Logo">
@@ -33,66 +32,134 @@
     </header>
 
     <main>
+        <!-- Introduction Section -->
         <section id="background-image">
-            <!-- A imagem de fundo será aplicada aqui -->
             <h1 id="introduction-h1">Weather and Climate</h1>
-            <p id="introduction-p">
-                We understand what the sky says!
-            </p>
+            <p id="introduction-p">We understand what the sky says!</p>
         </section>
 
+        <!-- Banner Section -->
         <section id="banner">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="image1.jpg" alt="Service 1">
+                        <img src="assets/img/image1.jpg" alt="Service 1">
                         <p>Our main service 1</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="image2.jpg" alt="Service 2">
+                        <img src="assets/img/image2.jpg" alt="Service 2">
                         <p>Our main service 2</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="image3.jpg" alt="Service 3">
+                        <img src="assets/img/image3.jpg" alt="Service 3">
                         <p>Our main service 3</p>
                     </div>
                 </div>
-                <!-- Botões de navegação -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <!-- Indicadores -->
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-next" aria-label="Next"></div>
+                <div class="swiper-button-prev" aria-label="Previous"></div>
+                <!-- Pagination Dots -->
                 <div class="swiper-pagination"></div>
             </div>
         </section>
 
-        <section>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum iste vel. Commodi excepturi facilis ipsum maiores voluptatum alias quos? Aperiam molestiae impedit ipsam? Magni necessitatibus at nostrum vel laboriosam unde suscipit illo blanditiis ratione in! Esse, animi veniam soluta exercitationem cumque ullam! Eaque animi, sequi nemo ipsum, expedita sit sed ad quae, ipsa ipsam earum quis recusandae modi reiciendis consequatur.
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <img src="assets/img/team.jpg" alt="Our Team" class="about-img">
+                <p id="about-text">We offer comprehensive meteorological services. Our team of experts interprets the sky and delivers actionable insights. Whether you're an individual, business, or industry, we provide accurate and timely weather forecasts, ensuring you're always prepared for whatever the weather brings.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <img src="assets/img/service_forecasting.jpg" alt="Forecasting Service" class="service-img">
+                    <h3>Weather Forecasting</h3>
+                    <p>Accurate and reliable weather predictions tailored to your location or business needs.</p>
+                </div>
+                <div class="service-item">
+                    <img src="assets/img/service_climate_analysis.jpg" alt="Climate Analysis" class="service-img">
+                    <h3>Climate Analysis</h3>
+                    <p>In-depth analysis of climate patterns to help businesses adapt to long-term changes.</p>
+                </div>
+                <div class="service-item">
+                    <img src="assets/img/service_custom_reports.jpg" alt="Custom Reports" class="service-img">
+                    <h3>Custom Reports</h3>
+                    <p>Personalized weather reports for industries such as agriculture, aviation, and energy.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <h2>Client Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <p>"Weather and Climate provides the best weather services we've ever used. Their forecasts are always spot on!"</p>
+                    <p>- Sarah, Agriculture Industry</p>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Thanks to their reliable climate analysis, we were able to prepare for extreme weather and prevent losses."</p>
+                    <p>- John, Energy Sector</p>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Their custom weather reports are essential for our daily operations. Highly recommended!"</p>
+                    <p>- Lisa, Aviation Industry</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>Follow us on:</p>
         <ul class="social-icons">
-            <li><a href=""><img src="assets/img/GitHub-Mark-Light-32px.png" alt="GitHub Logo"></a></li>
-            <li><a href=""><img src="assets/img/Logo_linkedin.png" alt="LinkedIn Logo"></a></li>
-            <li><a href=""><img src="assets/img/Instagram_icon.png" alt="Instagram Logo"></a></li>
+            <li><a href="#"><img src="assets/img/GitHub-Mark-Light-32px.png" alt="GitHub Logo"></a></li>
+            <li><a href="#"><img src="assets/img/Logo_linkedin.png" alt="LinkedIn Logo"></a></li>
+            <li><a href="#"><img src="assets/img/Instagram_icon.png" alt="Instagram Logo"></a></li>
         </ul>
-
-        <p id="footer-p-id">&copy; 2024 <img src="assets/img/Logo - WMM.png" alt=""> Todos os direitos reservados.</p>
+        <p>&copy; 2024 <img src="assets/img/Logo - WMM.png" alt="Company Logo"> All rights reserved.</p>
     </footer>
 
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper-container', {
-          loop: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         });
     </script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
 </body>
 </html>

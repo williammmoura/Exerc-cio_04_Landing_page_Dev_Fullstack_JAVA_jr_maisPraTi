@@ -43,6 +43,11 @@ header img {
     height: auto;
 }
 
+header.solid-background {
+    background-color: #000922; /* Cor sólida quando o usuário rolar */
+    transition: background-color 0.3s ease-in-out;
+}
+
 nav {
     display: flex;
     justify-content: center;
@@ -94,39 +99,39 @@ div button:hover {
 #background-image {
     background-image: url('../assets/img/DSC_0534.JPG');
     background-size: cover;
-    background-position: center; /* Centraliza a imagem */
+    background-position: center;
     background-repeat: no-repeat;
     height: calc(100vh - 0px);
     position: relative;
     display: flex;
-    flex-direction: column; /* Altera para coluna para empilhar os elementos */
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    text-align: center; /* Centraliza o texto no meio */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     z-index: -1;
 }
 
 /* Estilização das tags <h1> e <p> */
 #background-image h1 {
-    font-size: 4rem; /* Ajusta o tamanho da fonte do título */
+    font-size: 4rem;
     color: var(--primary);
     text-transform: uppercase;
-    letter-spacing: 2px; /* Aumenta o espaçamento entre letras */
+    letter-spacing: 2px;
 }
 
 #background-image p {
-    font-size: 1.5rem; /* Ajusta o tamanho da fonte do parágrafo */
+    font-size: 1.5rem;
     color: var(--primary);
-    margin-top: 20px; /* Dá espaço entre o <h1> e o <p> */
+    margin-top: 20px;
 }
 
-/*Estilização do Main*/
+/* Estilização do Main */
 main {
-    padding-bottom: 20px; /* Garante espaço entre o conteúdo e o footer */
+    padding-bottom: 20px; 
 }
 
 /* Estilização da seção do banner */
-#banner{
+#banner {
     margin-top: 100px;
     min-height: 400px;
     display: flex;
@@ -136,18 +141,17 @@ main {
 }
 
 .swiper-slide p {
-    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.6); 
     padding: 10px;
     border-radius: 5px;
 }
 
-
-.swiper-container{
+.swiper-container {
     width: 80%;
     height: 100%;
 }
 
-.swiper-slide{
+.swiper-slide {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,24 +159,79 @@ main {
     color: var(--text-color);
 }
 
-.swiper-slide img{
+.swiper-slide img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;;
+    border-radius: 5px;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
     background: var(--secondary);
 }
 
-.swiper-button-next, .swiper-button-prev{
+.swiper-button-next, .swiper-button-prev {
     color: var(--secondary);
 }
 
-.swiper-button-next:hover, .swiper-button-prev:hover{
+.swiper-button-next:hover, .swiper-button-prev:hover {
     color: var(--hover-color);
 }
 
+/* Seção Sobre (About) */
+#section-about {
+    display: flex;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+}
+
+#section-about img {
+    width: 40%;
+    margin-right: 20px;
+}
+
+#section-about-text {
+    flex: 1;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Seção Serviços (Services) */
+#section-services {
+    color: #333;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#section-services h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* Estilização dos itens de serviço */
+.service-item {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
 
 /* Estilização do footer */
 footer {
@@ -181,8 +240,8 @@ footer {
     text-align: center;
     border-top: 1px solid var(--secondary);
     position: relative;
-    margin-top: auto; /* Adiciona espaço automático acima do footer */
-    width: 100%; /* Garante que o footer ocupe toda a largura */
+    margin-top: auto;
+    width: 100%;
 }
 
 footer p {
