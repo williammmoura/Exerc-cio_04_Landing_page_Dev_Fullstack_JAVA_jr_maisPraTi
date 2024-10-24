@@ -178,59 +178,243 @@ main {
 }
 
 /* Seção Sobre (About) */
-#section-about {
+#about {
+    background-color: var(--primary);
+    padding: 80px 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 40px 20px;
-    background-color: #f5f5f5;
+    text-align: center; /* Centraliza o texto principal */
 }
 
-#section-about img {
-    width: 40%;
-    margin-right: 20px;
+#about h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 40px;
+    font-weight: bold;
 }
 
-#section-about-text {
-    flex: 1;
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #333;
+/* Estilização da about-content */
+.about-content {
+    display: flex; /* Mantém a estrutura em linha */
+    align-items: center; /* Alinha verticalmente a imagem e o texto */
+    justify-content: space-between; /* Distribui espaço entre imagem e texto */
+    max-width: 1200px;
+    width: 100%;
 }
 
-/* Seção Serviços (Services) */
-#section-services {
-    color: #333;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 40px 20px;
-    background-color: #fff;
+/* Ajuste na estilização da imagem */
+.about-img {
+    flex: 0 0 45%; /* A imagem ocupa 45% da largura */
+    max-width: 100%; /* Garante que a imagem não ultrapasse seu contêiner */
+    max-height: 300px; /* Define uma altura máxima para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 20px; /* Espaçamento à direita da imagem */
+}
+
+/* O texto deve ocupar o restante do espaço disponível */
+#about-text {
+    flex: 0 0 45%; /* O texto ocupa 45% da largura */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Espaçamento inferior se a imagem estiver acima do texto */
+.about-content > img {
+    margin-bottom: 20px; /* Espaço inferior se a imagem estiver acima do texto */
+}
+
+/* Seção de Serviços */
+#services {
+    background-color: #f8f9fa; /* Cor de fundo clara */
+    padding: 60px 20px;
     text-align: center;
 }
 
-#section-services h2 {
+#services h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Contêiner de serviços */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas ajustáveis */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cada serviço */
+.service-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.service-box:hover {
+    transform: translateY(-10px); /* Elevação suave */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte ao hover */
+}
+
+/* Ícone ou imagem de cada serviço */
+.service-box img, .service-box .icon {
+    width: 80px;
+    height: 80px;
     margin-bottom: 20px;
-    font-size: 2em;
-    color: #333;
 }
 
-/* Estilização dos itens de serviço */
-.service-item {
-    background: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.service-item:hover {
-    transform: translateY(-10px);
-}
-
-.service-icon {
-    font-size: 40px;
-    color: #007bff;
+.service-box h3 {
+    font-size: 1.5rem;
+    color: var(--primary);
     margin-bottom: 15px;
+}
+
+.service-box p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Seção de Testimonials */
+#testimonials {
+    background-color: #e9ecef; /* Cor de fundo suave */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Contêiner de depoimentos */
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta automaticamente o número de colunas */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+/* Estilização de cada depoimento */
+.testimonial {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilização do conteúdo dos depoimentos */
+.testimonial p {
+    font-style: italic;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Nome do autor do depoimento */
+.testimonial .author {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+/* Cargo ou posição do autor */
+.testimonial .author-position {
+    font-size: 1rem;
+    color: #888;
+}
+
+/* Seção de Contato */
+#contact {
+    background-color: var(--primary);
+    padding: 50px 20px;
+    text-align: center;
+    color: #333; /* Cor do texto */
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Formulário de Contato */
+.contact-form {
+    max-width: 600px; /* Limitando a largura para melhorar a legibilidade */
+    margin: 0 auto; /* Centraliza o formulário */
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px;
+}
+
+/* Estilização dos rótulos (labels) */
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+/* Estilização dos campos de entrada */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    background-color: #fafafa; /* Fundo suave */
+    transition: border 0.3s ease;
+}
+
+/* Foco nos campos para melhorar a acessibilidade */
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--secondary);
+    outline: none;
+}
+
+/* Estilização do botão de envio */
+.contact-form button {
+    padding: 12px 30px;
+    background-color: var(--secondary);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+/* Efeito de hover e clique no botão */
+.contact-form button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px); /* Efeito de elevação */
+}
+
+.contact-form button:active {
+    transform: scale(0.98);
 }
 
 /* Estilização do footer */
