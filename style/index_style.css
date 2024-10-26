@@ -225,61 +225,65 @@ main {
 
 /* Seção de Serviços */
 #services {
-    background-color: #f8f9fa; /* Cor de fundo clara */
     padding: 60px 20px;
+    background-color: var(--primary);
     text-align: center;
 }
 
 #services h2 {
     font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 40px;
+    color: var(--text-color);
+    margin-bottom: 30px;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
-/* Contêiner de serviços */
 .services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas ajustáveis */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 30px;
-    max-width: 1200px;
+    max-width: 800px; /* Ajuste para um tamanho adequado */
     margin: 0 auto;
 }
 
-/* Cada serviço */
-.service-box {
-    background-color: #fff;
-    padding: 40px;
+.service {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.service-box:hover {
-    transform: translateY(-10px); /* Elevação suave */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte ao hover */
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Ícone ou imagem de cada serviço */
-.service-box img, .service-box .icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 20px;
-}
-
-.service-box h3 {
-    font-size: 1.5rem;
-    color: var(--primary);
+.service .icon {
+    font-size: 3rem;
+    color: var(--secondary);
     margin-bottom: 15px;
 }
 
-.service-box p {
+.service h3 {
+    font-size: 1.5rem;
+    color: #333333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.service p {
     font-size: 1rem;
-    color: #666;
+    color: #666666;
     line-height: 1.6;
 }
 
+  
 /* Seção de Testimonials */
 #testimonials {
     background-color: #e9ecef; /* Cor de fundo suave */
@@ -295,7 +299,7 @@ main {
 }
 
 /* Contêiner de depoimentos */
-.testimonials-container {
+.testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta automaticamente o número de colunas */
     gap: 20px;
@@ -339,6 +343,7 @@ main {
     font-size: 1rem;
     color: #888;
 }
+
 
 /* Seção de Contato */
 #contact {

@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Weather and Climate - We understand what the sky says. Learn about our weather services and testimonials from clients.">
+    <meta name="description"
+        content="Weather and Climate - We understand what the sky says. Learn about our weather services and testimonials from clients.">
     <meta name="keywords" content="weather, climate, forecasting, meteorology, services">
     <title>Weather and Climate</title>
 
@@ -13,6 +14,8 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style/index_style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -68,48 +71,46 @@
             <h2>About Us</h2>
             <div class="about-content">
                 <img src="assets/img/img_about.jpg" alt="Our Team" class="about-img">
-                <p id="about-text">We offer comprehensive meteorological services. Our team of experts interprets the sky and delivers actionable insights. Whether you're an individual, business, or industry, we provide accurate and timely weather forecasts, ensuring you're always prepared for whatever the weather brings.</p>
+                <p id="about-text">We offer comprehensive meteorological services. Our team of experts interprets the
+                    sky and delivers actionable insights. Whether you're an individual, business, or industry, we
+                    provide accurate and timely weather forecasts, ensuring you're always prepared for whatever the
+                    weather brings.</p>
             </div>
         </section>
 
-        <!-- Services Section -->
         <section id="services">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <img src="assets/img/service_forecasting.jpg" alt="Forecasting Service" class="service-img">
-                    <h3>Weather Forecasting</h3>
-                    <p>Accurate and reliable weather predictions tailored to your location or business needs.</p>
+            <div class="services-container">
+                <h2>Climate and Weather Services</h2>
+                <div class="service">
+                    <div class="icon">
+                        <i class="fas fa-cloud-sun-rain"></i>
+                    </div>
+                    <h3>Real-Time Weather Forecast</h3>
+                    <p>Get accurate weather forecasts to plan your day with confidence.</p>
                 </div>
-                <div class="service-item">
-                    <img src="assets/img/service_climate_analysis.jpg" alt="Climate Analysis" class="service-img">
-                    <h3>Climate Analysis</h3>
-                    <p>In-depth analysis of climate patterns to help businesses adapt to long-term changes.</p>
+                <div class="service">
+                    <div class="icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Climate Analysis</h3>
+                    <p>Analyze climate patterns and trends worldwide with our advanced tools.</p>
                 </div>
-                <div class="service-item">
-                    <img src="assets/img/service_custom_reports.jpg" alt="Custom Reports" class="service-img">
-                    <h3>Custom Reports</h3>
-                    <p>Personalized weather reports for industries such as agriculture, aviation, and energy.</p>
+                <div class="service">
+                    <div class="icon">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <h3>Temperature and Humidity Tracking</h3>
+                    <p>Monitor temperature and humidity in real-time for better decision-making.</p>
                 </div>
             </div>
         </section>
+
 
         <!-- Testimonials Section -->
         <section id="testimonials">
             <h2>Client Testimonials</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-item">
-                    <p>"Weather and Climate provides the best weather services we've ever used. Their forecasts are always spot on!"</p>
-                    <p>- Sarah, Agriculture Industry</p>
-                </div>
-                <div class="testimonial-item">
-                    <p>"Thanks to their reliable climate analysis, we were able to prepare for extreme weather and prevent losses."</p>
-                    <p>- John, Energy Sector</p>
-                </div>
-                <div class="testimonial-item">
-                    <p>"Their custom weather reports are essential for our daily operations. Highly recommended!"</p>
-                    <p>- Lisa, Aviation Industry</p>
-                </div>
+            <div id="testimonials-container" class="testimonials-grid">
+                <!-- Testimonials from API will be dynamically added here -->
             </div>
         </section>
 
@@ -162,4 +163,5 @@
     <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
+
 </html>
