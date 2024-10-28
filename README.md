@@ -1,8 +1,8 @@
-# Landing Page - Weather and Climate
+# Criando uma Landing Page - Exercício 04 (Módulo III)
 
 ## Descrição do Projeto
 
-Este projeto é uma landing page para um serviço de meteorologia e clima, chamada "Weather and Climate". O objetivo é fornecer informações sobre os serviços oferecidos, depoimentos de clientes e uma forma de contato para os usuários.
+Este projeto faz parte do **exercício 4** do curso Desenvolvedor Fullstack Java Júnior, do programa +PraTi. É uma landing page para um serviço de meteorologia e clima, chamada "Weather and Climate". O objetivo é fornecer informações sobre os serviços oferecidos, depoimentos de clientes e uma forma de contato para os usuários.
 
 ## Funcionalidades
 
