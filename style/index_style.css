@@ -114,6 +114,7 @@ div button:hover {
 /* Estilização das tags <h1> e <p> */
 #background-image h1 {
     font-size: 4rem;
+    font-weight: bold;
     color: var(--primary);
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -121,6 +122,7 @@ div button:hover {
 
 #background-image p {
     font-size: 1.5rem;
+    font-weight: bolder;
     color: var(--primary);
     margin-top: 20px;
 }
@@ -132,37 +134,49 @@ main {
 
 /* Estilização da seção do banner */
 #banner {
-    margin-top: 100px;
-    min-height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.swiper-slide p {
-    background-color: rgba(0, 0, 0, 0.6); 
-    padding: 10px;
-    border-radius: 5px;
+    padding: 80px 0;
 }
 
 .swiper-container {
-    width: 80%;
-    height: 100%;
+    width: 100%; /* Garante que o contêiner do Swiper ocupe 100% da largura */
+    overflow: hidden; /* Para evitar que o conteúdo transborde */
+    position: relative; /* Necessário para o posicionamento absoluto das setas */
+    margin-top: 20px; /* Para criar um espaço acima do carrossel */
 }
 
 .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-color);
+    position: relative; /* Necessário para o posicionamento absoluto do texto */
+    width: 100%; /* Garante que o slide ocupe 100% da largura do contêiner */
+    overflow: hidden; /* Para evitar que o conteúdo transborde */
 }
 
 .swiper-slide img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+    width: 100%; /* A imagem ocupará 100% da largura do slide */
+    height: 400px; /* Defina a altura desejada para todas as imagens */
+    object-fit: cover; /* Faz com que a imagem cubra todo o espaço, mantendo a proporção */
+    display: block; /* Remove o espaço abaixo da imagem */
+}
+
+.swiper-slide p {
+    position: absolute; /* Para posicionar o texto sobre a imagem */
+    top: 50%; /* Posiciona o texto verticalmente no meio */
+    left: 50%; /* Posiciona o texto horizontalmente no meio */
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    font-size: 28px;
+    font-weight: bold; 
+    text-align: center; /* Centraliza o texto */
+    z-index: 10; /* Garante que o texto fique sobre a imagem */
+    margin: 0; /* Remove margens indesejadas */
+    padding: 0; /* Remove preenchimentos indesejados */
+    width: 100%; /* Garante que o texto ocupe toda a largura disponível */
+}
+
+#p-slide-1 {
+    color: var(--text-color);
+}
+
+#p-slide-3 {
+    color: var(--secondary);
 }
 
 .swiper-pagination-bullet {
