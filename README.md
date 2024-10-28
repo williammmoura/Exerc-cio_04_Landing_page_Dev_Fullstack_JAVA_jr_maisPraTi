@@ -25,7 +25,7 @@ Este projeto é uma landing page para um serviço de meteorologia e clima, chama
 1. **Clone o repositório:**
 
    ```bash
-   
+   git@github.com:williammmoura/Exerc-cio_04_Landing_page_Dev_Fullstack_JAVA_jr_maisPraTi.git
     ```
 
 1 - Abra o arquivo index.html em um navegador da web.
