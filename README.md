@@ -34,6 +34,7 @@ Este projeto é uma landing page para um serviço de meteorologia e clima, chama
 
 ## Estrutura do Projeto
 
+```bash
 ├── assets
 │   ├── img
 │   └── ...
@@ -43,6 +44,7 @@ Este projeto é uma landing page para um serviço de meteorologia e clima, chama
 │   ├── script.js
 ├── index.html
 └── README.md
+```
 
 ## Contribuições
 Sinta-se à vontade para contribuir com melhorias. Basta abrir um pull request ou reportar um problema.
