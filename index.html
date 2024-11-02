@@ -12,10 +12,22 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
+    <!--icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!--EmailJS - DNS-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "IudBfAdWd3OrQXebC",
+            });
+        })();
+    </script>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style/index_style.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -46,19 +58,19 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="assets/img/imagem_satelite.png" alt="Service 1">
+                        <img src="assets/img/imagem_satelite.png" alt="Satellite image of the services offered">
                         <div class="text-overlay">
                             <p id="p-slide-1">Explore our satellite monitoring service, which provides accurate data on real-time weather conditions.</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/img/Autocumulus.jpg" alt="Service 2">
+                        <img src="assets/img/Autocumulus.jpg" alt="Autocumulus clouds">
                         <div class="text-overlay">
                             <p id="p-slide-2">Discover our cloud forecasting service, analyzing atmospheric formations for more accurate predictions.</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/img/Água na Janela.JPG" alt="Service 3">
+                        <img src="assets/img/Água na Janela.JPG" alt="Flood prevention system with raindrop image">
                         <div class="text-overlay">
                             <p id="p-slide-3">Learn how our water management system can help prevent flooding and ensure safety in your home.</p>
                         </div>
@@ -125,18 +137,22 @@
         <section id="contact">
             <h2>Contact Us</h2>
             <div class="contact-form">
-                <form action="#" method="POST">
+                <form id="contact-form">
                     <label for="name">Your Name:</label>
                     <input type="text" id="name" name="name" required>
-
+        
                     <label for="email">Your Email:</label>
                     <input type="email" id="email" name="email" required>
-
+        
+                    <label for="phone">Your Phone:</label>
+                    <input type="text" id="phone" name="phone">
+        
                     <label for="message">Your Message:</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
-
-                    <button type="submit">Send Message</button>
+        
+                    <button onclick="sendMail()">Send Message</button>
                 </form>
+                <div id="form-message"></div> <!-- Elemento para mensagens de sucesso ou erro -->
             </div>
         </section>
     </main>
@@ -151,24 +167,10 @@
         <p>&copy; 2024 <img src="assets/img/Logo - WMM.png" alt="Company Logo"> All rights reserved.</p>
     </footer>
 
-    <!-- Swiper JS -->
+    <!--Swiper-->>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper-container', {
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
 
     <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
-
 </html>
