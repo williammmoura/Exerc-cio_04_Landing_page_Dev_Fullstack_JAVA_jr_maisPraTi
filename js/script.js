@@ -38,11 +38,30 @@ fetch("https://randomuser.me/api/?results=3")
 
 /* EmailJS */
 function sendMail() {
+    // Obter os valores dos campos
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    // Verifica se os campos obrigatórios estão preenchidos
+    if (!name || !email || !message) {
+        alert("Please fill in all required fields."); // Mensagem de erro
+        return; // Sai da função, não envia o email
+    }
+
+    // Validação do formato de e-mail
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address."); // Mensagem de erro para email inválido
+        return; // Sai da função, não envia o email
+    }
+
     let params = {
-        name: document.getElementById("name").value,
-        phone: document.getElementById("phone").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
+        name: name,
+        phone: phone,
+        email: email,
+        message: message,
     };
 
     const serviceID = "service_sp4lbal";
@@ -50,17 +69,10 @@ function sendMail() {
 
     emailjs.send(serviceID, templateID, params)
         .then(res => {
-            document.getElementById("name").value = "";
-            document.getElementById("phone").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("message").value = "";
-            console.log(res);
-            alert("Your response sent successfully!!");
+            document.getElementById("contact-form").reset(); // Limpa o formulário
+            alert("Your response has been sent successfully!"); // Mensagem de sucesso
         })
         .catch(err => {
-            alert("Erro ao enviar mensagem: " + JSON.stringify(err));
-            console.log(err);
-        }
-    );
+            alert("Erro ao enviar mensagem: " + JSON.stringify(err)); // Mensagem de erro
+        });
 }
-
